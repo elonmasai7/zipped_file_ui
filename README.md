@@ -95,7 +95,8 @@ zipcracker secret.zip --wordlist passwords.txt
 ## Screenshots 🖼️
 
 ### GUI Interface:
-![Zipped File Password Cracker GUI](screenshots/gui-screenshot.png)
+![Zipped File Password Cracker GUI]![image](https://github.com/user-attachments/assets/937c0aff-8519-4795-ba73-a84a43ae641e)
+
 
 - **Sleek Dark Mode**: Eye-catching dark theme with a modern layout.
 - **File Selection**: Simple file picker for selecting ZIP files and wordlists.
