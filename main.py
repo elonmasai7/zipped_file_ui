@@ -76,7 +76,7 @@ def on_start_cracking():
     start_cracking(zip_file_path, dictionary_path)
 
 root = tk.Tk()
-root.title("ZIP File Password Cracker")
+root.title("Masai's ZIP File Password Cracker")
 root.geometry("500x250")
 
 zip_file_label = tk.Label(root, text="Select a ZIP file", pady=10)
