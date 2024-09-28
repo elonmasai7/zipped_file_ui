@@ -76,18 +76,29 @@ def on_start_cracking():
         dictionary_path = create_wordlist_directory()
     start_cracking(zip_file_path, dictionary_path)
 
-# Set up the main window with modern styles
 root = tk.Tk()
-root.title("ZIP File Password Cracker")
-root.geometry("500x250")
+root.title("Modern ZIP Password Cracker")
+root.geometry("500x300")
+root.configure(bg="#2E3440")
 
-zip_file_label = tk.Label(root, text="Select a ZIP file", pady=10)
-zip_file_label.pack()
+style = ttk.Style()
+style.theme_use('clam')
+style.configure("TLabel", background="#2E3440", foreground="#ECEFF4", font=("Helvetica", 12))
+style.configure("TButton", background="#4C566A", foreground="#ECEFF4", font=("Helvetica", 12), padding=6)
+style.map("TButton", background=[('active', '#5E81AC')])
+
+header_label = ttk.Label(root, text="ZIP Password Cracker", font=("Helvetica", 16, "bold"), anchor="center")
+header_label.pack(pady=20)
+
+zip_frame = ttk.Frame(root, padding="10")
+zip_frame.pack(fill="x", padx=20, pady=10)
+
+zip_file_label = ttk.Label(zip_frame, text="Select a ZIP file", anchor="center")
+zip_file_label.pack(side="left", padx=10)
 
 select_zip_button = ttk.Button(zip_frame, text="Browse", command=select_zip_file)
 select_zip_button.pack(side="right")
 
-# Wordlist File Section
 wordlist_frame = ttk.Frame(root, padding="10")
 wordlist_frame.pack(fill="x", padx=20, pady=10)
 
@@ -97,11 +108,9 @@ wordlist_label.pack(side="left", padx=10)
 select_wordlist_button = ttk.Button(wordlist_frame, text="Browse Wordlist", command=select_custom_wordlist)
 select_wordlist_button.pack(side="right")
 
-# Start Button
 start_button = ttk.Button(root, text="Start Cracking", command=on_start_cracking)
 start_button.pack(pady=20)
 
-# Footer Label
 footer_label = ttk.Label(root, text="Developed with Python & Tkinter", font=("Helvetica", 10), anchor="center")
 footer_label.pack(side="bottom", pady=10)
 
