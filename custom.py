@@ -33,7 +33,7 @@ def create_wordlist_directory():
 def generate_wordlist(file_path):
     common_passwords = [
         "123456", "password", "123456789", "12345678", "12345",
-        "qwerty", "abc123", "111111", "1234", "admin", "letmein"
+        "qwerty", "abc123", "11111", "1234", "admin", "letmein"
     ]
     combinations = itertools.product("abcdefghijklmnopqrstuvwxyz", repeat=4)
     with open(file_path, 'w') as file:
